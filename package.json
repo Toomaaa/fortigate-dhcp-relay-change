@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "inquirer": "^7.1.0",
+    "ssh2": "^0.8.9"
+  }
+}
