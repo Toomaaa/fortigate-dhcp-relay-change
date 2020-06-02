@@ -5,7 +5,7 @@ const conn = new Client()
 
 // Defaults value for prompts
 const DEFAULTS = {
-	_FWLOGIN: 'admin',						// put here the default SSH login for the firewall
+	_FWLOGIN: 'admin',						          // put here the default SSH login for the firewall
 	_DHCPRELAY: '172.27.10.10 10.11.12.13' 	// put here the default DHCP servers, separated by a space
 }
 
@@ -77,7 +77,7 @@ inquirer
 										output += 'set dhcp-relay-ip "' + answers.dhcprelay.replace(' ', '" "') + '"\n'
 										output += 'next\n'
 									}
-									
+
 								}
 
 								fs.writeFile('log/' + answers.ip + '-new.log', output, (errWriteNew) => {
@@ -113,10 +113,10 @@ inquirer
 									})
 								})
 
-								
+
 							})
 					})
-					
+
 				}).on('data', function(data) {
 					if (data.indexOf('# ') === -1) {
 						input += data
